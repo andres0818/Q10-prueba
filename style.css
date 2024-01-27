@@ -33,6 +33,10 @@ body {
 }
 
 @media (max-width: 485px) {
+
+  html{
+    background-color: var(--white-primary);
+  }
   body {
     width: 100vw;
     height: 100vh;
