@@ -1,0 +1,314 @@
+/* Fuente de letra */
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Variables para uso global */
+:root {
+  --red-primary: #ff0e0e;
+  --white-primary: #ffffff;
+  --gray-primary: #858585;
+  --gray-secondary: #595b5c;
+  --font-family-number: "Geologica", sans-serif;
+  --font-family-text: "Archivo";
+}
+
+/* Estilos generales */
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray-primary);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 485px;
+  height: 945px;
+  background-color: var(--white-primary);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+}
+
+@media (max-width: 485px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 385px) {
+  body {
+    width: 100vw;
+    height: 125vh;
+  }
+}
+
+/* ========= Estilos para el header ============= */
+.container {
+  width: 100%;
+  background: linear-gradient(var(--red-primary) 9px, transparent 0%);
+  padding-top: 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+  margin: 5px 0 15px 0;
+}
+
+.title {
+  font-size: 32px;
+  font-family: var(--font-family-text);
+  margin: 0;
+}
+
+.t-white {
+  font-weight: 100;
+  background-color: var(--red-primary);
+  color: var(--white-primary);
+  border-radius: 3px;
+  padding: 0 23px;
+  z-index: 2;
+}
+
+.t-red {
+  transform: translateY(-2px);
+  font-size: 28.5px;
+  color: var(--red-primary);
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+}
+
+.t-red::after {
+  content: "";
+  width: 131%;
+  height: 152%;
+  position: absolute;
+  top: -13%;
+  left: -16%;
+  z-index: -199;
+
+  background-color: var(--white-primary);
+
+  box-shadow: 0 0 5px 1px rgb(207, 207, 207);
+  transform: skew(5deg) rotateZ(-2deg);
+  transform-origin: top left;
+}
+
+/* ========= Fin estilos para el header ============= */
+
+/* ========= Estilos para el section promo-section ============= */
+.promo-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 26px;
+  font-family: var(--font-family-text);
+}
+
+.promo-section__content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+}
+
+.promo-section__title {
+  font-size: 28px;
+  color: var(--gray-primary);
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+@media (max-width: 485px) {
+  .promo-section__title {
+    font-size: 22px;
+  }
+}
+
+.promo-section__title > span {
+  color: var(--red-primary);
+}
+
+.promo-section__description {
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  background-color: var(--red-primary);
+  color: var(--white-primary);
+  font-weight: 100;
+  height: 24px;
+  border-radius: 0 3px 3px 0;
+}
+
+.promo-section__image {
+  width: 50%;
+  text-align: center;
+}
+
+.promo-section__image > img {
+  width: 75%;
+}
+/* ========= Fin estilos para el section promo-section ============= */
+
+/* ========= Estilos para el section features-section ============= */
+
+.features-section {
+  display: flex;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.feature-left {
+  width: 50%;
+  margin: 0;
+  text-align: center;
+}
+
+.feature-image {
+  width: 91%;
+  height: 100%;
+}
+
+.feature-right {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin: -50px 0 0 24px;
+}
+@media (max-width: 414px) {
+  .feature-right {
+    margin: 0;
+  }
+}
+
+.feature-container {
+  display: flex;
+  flex-direction: row;
+  font-family: var(--font-family-text);
+  color: var(--gray-primary);
+  padding: 7.5px 0;
+  line-height: 1;
+}
+
+.feature-container > p > strong {
+  color: var(--gray-secondary) !important;
+  font-weight: 800;
+}
+
+.feature-container:first-child,
+.feature-container:nth-child(2) {
+  border-bottom: solid var(--red-primary) 1.8px;
+}
+
+.feature-container:last-child {
+  padding: 0;
+  margin: -3px;
+  color: var(--red-primary);
+  font-family: var(--font-family-text);
+  font-weight: 900;
+  text-align: right;
+  font-size: 16px;
+}
+
+.feature-icon {
+  width: 32px;
+  object-fit: contain;
+  margin-right: 12px;
+}
+
+/* ========= Fin estilos para el section features-section ============= */
+
+/* ========= Estilos para el section pricing-section ============= */
+
+.pricing-section {
+  background-color: var(--red-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 88px;
+  color: var(--white-primary);
+  font-family: var(--font-family-number);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* .pricing-text {
+} */
+.pricing-text-1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 0.2;
+  letter-spacing: -2px;
+  padding-top: 13px;
+}
+
+.pricing-text-1 > span:first-child {
+  font-weight: 100;
+}
+
+.pricing-text-1 > span:nth-child(2) {
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.unit-price {
+  font-size: 11px;
+  font-weight: 100;
+  letter-spacing: normal;
+}
+
+/* ========= Fin estilos para el section pricing-section ============= */
+
+/* ========= Estilos para el section footer-section ============= */
+
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: calc(100% - 60px);
+  height: 100%;
+}
+
+.contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-us > img {
+  width: 21px;
+  border-right: solid var(--gray-primary) 1px;
+  padding-right: 6px;
+  margin-right: 8px;
+}
+
+.contact-us > p {
+  font-family: var(--font-family-text);
+  color: var(--gray-secondary);
+  font-size: 12.5px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.qr-code > img {
+  width: 65px;
+}
+
+/* ========= Fin estilos para el section footer-section ============= */
